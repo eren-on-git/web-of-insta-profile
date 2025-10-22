@@ -1,0 +1,343 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #101010;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('mandala-dark-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00f2ff;
+}
+
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    animation: fadeInUp 1.5s 0.5s both;
+}
+
+.glitch {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 10vw, 5rem);
+    position: relative;
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #101010;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 #00f2ff, 2px 2px #ff00c1;
+    animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(2px, 9999px, 98px, 0);
+    }
+
+    100% {
+        clip: rect(90px, 9999px, 85px, 0);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip: rect(4px, 9999px, 100px, 0);
+    }
+
+    100% {
+        clip: rect(80px, 9999px, 60px, 0);
+    }
+}
+
+@keyframes glitch-skew {
+    0% {
+        transform: skew(0deg);
+    }
+
+    100% {
+        transform: skew(1deg);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#gallery,
+#about,
+#contact {
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    perspective: 1000px;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item:hover {
+    box-shadow: 0px 20px 40px rgba(0, 242, 255, 0.3);
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.glowing-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    margin-top: 2rem;
+    border: 2px solid #00f2ff;
+    border-radius: 5px;
+    color: #00f2ff;
+    background: transparent;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 5px #00f2ff, 0 0 15px #00f2ff, 0 0 25px #00f2ff;
+    animation: pulse 1.5s infinite alternate;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.glowing-button:hover {
+    background: #00f2ff;
+    color: #101010;
+    box-shadow: 0 0 10px #00f2ff, 0 0 40px #00f2ff, 0 0 80px #00f2ff;
+    animation: none;
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 5px #00f2ff, 0 0 15px #00f2ff;
+    }
+
+    to {
+        box-shadow: 0 0 15px #00f2ff, 0 0 35px #00f2ff;
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px) rotateZ(5deg);
+    transition: 1s all ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0) rotateZ(0deg);
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Garamond', 'serif';
+    background-color: #06030b;
+    color: #f0f0f0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.mandala-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 95vmin;
+    height: 95vmin;
+    z-index: -1;
+    opacity: 0.5;
+    animation: rotate 180s linear infinite;
+}
+
+.mandala-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.mandala-layer path,
+.mandala-layer circle {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation:
+        draw 7s ease-out forwards,
+        glow 5s ease-in-out infinite alternate;
+}
+
+.mandala-layer:nth-of-type(1) * {
+    animation-delay: 0s;
+}
+
+.mandala-layer:nth-of-type(2) * {
+    animation-delay: 1.0s;
+}
+
+.mandala-layer:nth-of-type(3) * {
+    animation-delay: 2.0s;
+}
+
+.mandala-layer:nth-of-type(4) * {
+    animation-delay: 3.0s;
+}
+
+.mandala-layer:nth-of-type(5) * {
+    animation-delay: 4.0s;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 3px rgba(0, 230, 255, 0.6));
+    }
+
+    to {
+        filter: drop-shadow(0 0 6px rgba(0, 230, 255, 0.9)) drop-shadow(0 0 9px rgba(150, 0, 255, 0.7));
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

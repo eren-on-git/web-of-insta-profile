@@ -1,0 +1,1436 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #101010;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('mandala-dark-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3vw;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00f2ff;
+    text-decoration: underline;
+}
+
+
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.typed-effect {
+    display: inline-block;
+    font-family: 'VT323', monospace, sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #00f2ff;
+    min-height: 2rem;
+}
+
+.typed-effect::after {
+    content: "​";
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+    border-right: 10px solid rgba(0, 242, 255, 0.75);
+    text-shadow: 0 0 5px rgba(0, 242, 255, 0.75);
+    white-space: nowrap;
+
+    animation:
+        typed 24.12s linear 1s infinite,
+        beam-blink 1s infinite;
+}
+
+
+@keyframes beam-blink {
+    75% {
+        border-color: transparent;
+    }
+}
+
+
+@keyframes typed {
+
+    0%,
+    4.14594% {
+        content: "​";
+    }
+
+    4.35031%,
+    4.55468% {
+        content: "W";
+    }
+
+    4.75905%,
+    4.96342% {
+        content: "Wh";
+    }
+
+    5.16779%,
+    5.37216% {
+        content: "Whe";
+    }
+
+    5.57653%,
+    5.7809% {
+        content: "Wher";
+    }
+
+    5.98527%,
+    6.18964% {
+        content: "Where";
+    }
+
+    6.39401%,
+    6.59838% {
+        content: "Where ";
+    }
+
+    6.80275%,
+    7.00712% {
+        content: "Where m";
+    }
+
+    7.21149%,
+    7.41586% {
+        content: "Where ma";
+    }
+
+    7.62023%,
+    7.8246% {
+        content: "Where man";
+    }
+
+    8.02897%,
+    8.23334% {
+        content: "Where mand";
+    }
+
+    8.43771%,
+    8.64208% {
+        content: "Where manda";
+    }
+
+    8.84645%,
+    9.05082% {
+        content: "Where mandal";
+    }
+
+    9.25519%,
+    9.45956% {
+        content: "Where mandala";
+    }
+
+    9.66393%,
+    9.8683% {
+        content: "Where mandalas";
+    }
+
+    10.07267%,
+    10.27704% {
+        content: "Where mandalas ";
+    }
+
+    10.48141%,
+    10.68578% {
+        content: "Where mandalas m";
+    }
+
+    10.89015%,
+    11.09452% {
+        content: "Where mandalas me";
+    }
+
+    11.29889%,
+    11.50326% {
+        content: "Where mandalas mee";
+    }
+
+    11.70763%,
+    11.912% {
+        content: "Where mandalas meet";
+    }
+
+    12.11637%,
+    12.32074% {
+        content: "Where mandalas meet ";
+    }
+
+    12.52511%,
+    12.72948% {
+        content: "Where mandalas meet m";
+    }
+
+    12.93385%,
+    13.13822% {
+        content: "Where mandalas meet mo";
+    }
+
+    13.34259%,
+    13.54696% {
+        content: "Where mandalas meet mod";
+    }
+
+    13.75133%,
+    13.9557% {
+        content: "Where mandalas meet mode";
+    }
+
+    14.16007%,
+    14.36444% {
+        content: "Where mandalas meet moder";
+    }
+
+    14.56881%,
+    14.77318% {
+        content: "Where mandalas meet modern";
+    }
+
+    14.97755%,
+    15.18192% {
+        content: "Where mandalas meet modern ";
+    }
+
+    15.38629%,
+    15.59066% {
+        content: "Where mandalas meet modern v";
+    }
+
+    15.79503%,
+    15.9994% {
+        content: "Where mandalas meet modern vi";
+    }
+
+    16.20377%,
+    16.40814% {
+        content: "Where mandalas meet modern vib";
+    }
+
+    16.61251%,
+    16.81688% {
+        content: "Where mandalas meet modern vibr";
+    }
+
+    17.02125%,
+    17.22562% {
+        content: "Where mandalas meet modern vibra";
+    }
+
+    17.42999%,
+    17.63436% {
+        content: "Where mandalas meet modern vibran";
+    }
+
+    17.83873%,
+    18.0431% {
+        content: "Where mandalas meet modern vibrancy";
+    }
+
+    18.24747%,
+    26.54148% {
+        content: "Where mandalas meet modern vibrancy.";
+    }
+
+    26.70757%,
+    26.87366% {
+        content: "Where mandalas meet modern vibrancy";
+    }
+
+    27.03975%,
+    27.20584% {
+        content: "Where mandalas meet modern vibranc";
+    }
+
+    27.37193%,
+    27.53802% {
+        content: "Where mandalas meet modern vibran";
+    }
+
+    27.70411%,
+    27.8702% {
+        content: "Where mandalas meet modern vibra";
+    }
+
+    28.03629%,
+    28.20238% {
+        content: "Where mandalas meet modern vibr";
+    }
+
+    28.36847%,
+    28.53456% {
+        content: "Where mandalas meet modern vib";
+    }
+
+    28.70065%,
+    28.86674% {
+        content: "Where mandalas meet modern vi";
+    }
+
+    29.03283%,
+    29.19892% {
+        content: "Where mandalas meet modern v";
+    }
+
+    29.36501%,
+    29.5311% {
+        content: "Where mandalas meet modern ";
+    }
+
+    29.69719%,
+    29.86328% {
+        content: "Where mandalas meet modern";
+    }
+
+    30.02937%,
+    30.19546% {
+        content: "Where mandalas meet moder";
+    }
+
+    30.36155%,
+    30.52764% {
+        content: "Where mandalas meet mode";
+    }
+
+    30.69373%,
+    30.85982% {
+        content: "Where mandalas meet mod";
+    }
+
+    31.02591%,
+    31.192% {
+        content: "Where mandalas meet mo";
+    }
+
+    31.35809%,
+    31.52418% {
+        content: "Where mandalas meet m";
+    }
+
+    31.69027%,
+    31.85636% {
+        content: "Where mandalas meet ";
+    }
+
+    32.02245%,
+    32.18854% {
+        content: "Where mandalas meet";
+    }
+
+    32.35463%,
+    32.52072% {
+        content: "Where mandalas mee";
+    }
+
+    32.68681%,
+    32.8529% {
+        content: "Where mandalas me";
+    }
+
+    33.01899%,
+    33.18508% {
+        content: "Where mandalas m";
+    }
+
+    33.35117%,
+    33.51726% {
+        content: "Where mandalas ";
+    }
+
+    33.68335%,
+    33.84944% {
+        content: "Where mandalas";
+    }
+
+    34.01553%,
+    34.18162% {
+        content: "Where mandala";
+    }
+
+    34.34771%,
+    34.5138% {
+        content: "Where mandal";
+    }
+
+    34.67989%,
+    34.84598% {
+        content: "Where manda";
+    }
+
+    35.01207%,
+    35.17816% {
+        content: "Where mand";
+    }
+
+    35.34425%,
+    35.51034% {
+        content: "Where man";
+    }
+
+    35.67643%,
+    35.84252% {
+        content: "Where ma";
+    }
+
+    36.00861%,
+    36.1747% {
+        content: "Where m";
+    }
+
+    36.34079%,
+    36.50688% {
+        content: "Where ";
+    }
+
+    36.67297%,
+    36.83906% {
+        content: "Where";
+    }
+
+    37.00515%,
+    37.17124% {
+        content: "Wher";
+    }
+
+    37.33733%,
+    37.50342% {
+        content: "Whe";
+    }
+
+    37.66951%,
+    37.8356% {
+        content: "Wh";
+    }
+
+    38.00169%,
+    38.16778% {
+        content: "W";
+    }
+
+    38.33387%,
+    42.47981% {
+        content: "​";
+    }
+
+    42.68418%,
+    42.88855% {
+        content: "A";
+    }
+
+    43.09292%,
+    43.29729% {
+        content: "Ar";
+    }
+
+    43.50166%,
+    43.70603% {
+        content: "Art";
+    }
+
+    43.9104%,
+    44.11477% {
+        content: "Art ";
+    }
+
+    44.31914%,
+    44.52351% {
+        content: "Art t";
+    }
+
+    44.72788%,
+    44.93225% {
+        content: "Art th";
+    }
+
+    45.13662%,
+    45.34099% {
+        content: "Art tha";
+    }
+
+    45.54536%,
+    45.74973% {
+        content: "Art that";
+    }
+
+    45.9541%,
+    46.15847% {
+        content: "Art that ";
+    }
+
+    46.36284%,
+    46.56721% {
+        content: "Art that b";
+    }
+
+    46.77158%,
+    46.97595% {
+        content: "Art that br";
+    }
+
+    47.18032%,
+    47.38469% {
+        content: "Art that bre";
+    }
+
+    47.58906%,
+    47.79343% {
+        content: "Art that brea";
+    }
+
+    47.9978%,
+    48.20217% {
+        content: "Art that breat";
+    }
+
+    48.40654%,
+    48.61091% {
+        content: "Art that breath";
+    }
+
+    48.81528%,
+    49.01965% {
+        content: "Art that breathe";
+    }
+
+    49.22402%,
+    49.42839% {
+        content: "Art that breathes";
+    }
+
+    49.63276%,
+    49.83713% {
+        content: "Art that breathes ";
+    }
+
+    50.0415%,
+    50.24587% {
+        content: "Art that breathes c";
+    }
+
+    50.45024%,
+    50.65461% {
+        content: "Art that breathes co";
+    }
+
+    50.85898%,
+    51.06335% {
+        content: "Art that breathes col";
+    }
+
+    51.26772%,
+    51.47209% {
+        content: "Art that breathes colo";
+    }
+
+    51.67646%,
+    51.88083% {
+        content: "Art that breathes color";
+    }
+
+    52.0852%,
+    60.37921% {
+        content: "Art that breathes color.";
+    }
+
+    60.5453%,
+    60.71139% {
+        content: "Art that breathes color";
+    }
+
+    60.87748%,
+    61.04357% {
+        content: "Art that breathes colo";
+    }
+
+    61.20966%,
+    61.37575% {
+        content: "Art that breathes col";
+    }
+
+    61.54184%,
+    61.70793% {
+        content: "Art that breathes co";
+    }
+
+    61.87402%,
+    62.04011% {
+        content: "Art that breathes c";
+    }
+
+    62.2062%,
+    62.37229% {
+        content: "Art that breathes ";
+    }
+
+    62.53838%,
+    62.70447% {
+        content: "Art that breathes";
+    }
+
+    62.87056%,
+    63.03665% {
+        content: "Art that breathe";
+    }
+
+    63.20274%,
+    63.36883% {
+        content: "Art that breath";
+    }
+
+    63.53492%,
+    63.70101% {
+        content: "Art that breat";
+    }
+
+    63.8671%,
+    64.03319% {
+        content: "Art that brea";
+    }
+
+    64.19928%,
+    64.36537% {
+        content: "Art that bre";
+    }
+
+    64.53146%,
+    64.69755% {
+        content: "Art that br";
+    }
+
+    64.86364%,
+    65.02973% {
+        content: "Art that b";
+    }
+
+    65.19582%,
+    65.36191% {
+        content: "Art that ";
+    }
+
+    65.528%,
+    65.69409% {
+        content: "Art that";
+    }
+
+    65.86018%,
+    66.02627% {
+        content: "Art tha";
+    }
+
+    66.19236%,
+    66.35845% {
+        content: "Art th";
+    }
+
+    66.52454%,
+    66.69063% {
+        content: "Art t";
+    }
+
+    66.85672%,
+    67.02281% {
+        content: "Art ";
+    }
+
+    67.1889%,
+    67.35499% {
+        content: "Art";
+    }
+
+    67.52108%,
+    67.68717% {
+        content: "Ar";
+    }
+
+    67.85326%,
+    68.01935% {
+        content: "A";
+    }
+
+    68.18544%,
+    72.33138% {
+        content: "​";
+    }
+
+    72.53575%,
+    72.74012% {
+        content: "W";
+    }
+
+    72.94449%,
+    73.14886% {
+        content: "We";
+    }
+
+    73.35323%,
+    73.5576% {
+        content: "Wel";
+    }
+
+    73.76197%,
+    73.96634% {
+        content: "Welc";
+    }
+
+    74.17071%,
+    74.37508% {
+        content: "Welco";
+    }
+
+    74.57945%,
+    74.78382% {
+        content: "Welcom";
+    }
+
+    74.98819%,
+    75.19256% {
+        content: "Welcome";
+    }
+
+    75.39693%,
+    75.6013% {
+        content: "Welcome ";
+    }
+
+    75.80567%,
+    76.01004% {
+        content: "Welcome t";
+    }
+
+    76.21441%,
+    76.41878% {
+        content: "Welcome to";
+    }
+
+    76.62315%,
+    76.82752% {
+        content: "Welcome to ";
+    }
+
+    77.03189%,
+    77.23626% {
+        content: "Welcome to t";
+    }
+
+    77.44063%,
+    77.645% {
+        content: "Welcome to th";
+    }
+
+    77.84937%,
+    78.05374% {
+        content: "Welcome to the";
+    }
+
+    78.25811%,
+    78.46248% {
+        content: "Welcome to the ";
+    }
+
+    78.66685%,
+    78.87122% {
+        content: "Welcome to the g";
+    }
+
+    79.07559%,
+    79.27996% {
+        content: "Welcome to the ga";
+    }
+
+    79.48433%,
+    79.6887% {
+        content: "Welcome to the gal";
+    }
+
+    79.89307%,
+    80.09744% {
+        content: "Welcome to the gall";
+    }
+
+    80.30181%,
+    80.50618% {
+        content: "Welcome to the galle";
+    }
+
+    80.71055%,
+    80.91492% {
+        content: "Welcome to the galler";
+    }
+
+    81.11929%,
+    81.32366% {
+        content: "Welcome to the gallery";
+    }
+
+    81.52803%,
+    89.82204% {
+        content: "Welcome to the gallery.";
+    }
+
+    89.98813%,
+    90.15422% {
+        content: "Welcome to the gallery";
+    }
+
+    90.32031%,
+    90.4864% {
+        content: "Welcome to the galler";
+    }
+
+    90.65249%,
+    90.81858% {
+        content: "Welcome to the galle";
+    }
+
+    90.98467%,
+    91.15076% {
+        content: "Welcome to the gall";
+    }
+
+    91.31685%,
+    91.48294% {
+        content: "Welcome to the gal";
+    }
+
+    91.64903%,
+    91.81512% {
+        content: "Welcome to the ga";
+    }
+
+    91.98121%,
+    92.1473% {
+        content: "Welcome to the g";
+    }
+
+    92.31339%,
+    92.47948% {
+        content: "Welcome to the ";
+    }
+
+    92.64557%,
+    92.81166% {
+        content: "Welcome to the";
+    }
+
+    92.97775%,
+    93.14384% {
+        content: "Welcome to th";
+    }
+
+    93.30993%,
+    93.47602% {
+        content: "Welcome to t";
+    }
+
+    93.64211%,
+    93.8082% {
+        content: "Welcome to ";
+    }
+
+    93.97429%,
+    94.14038% {
+        content: "Welcome to";
+    }
+
+    94.30647%,
+    94.47256% {
+        content: "Welcome t";
+    }
+
+    94.63865%,
+    94.80474% {
+        content: "Welcome ";
+    }
+
+    94.97083%,
+    95.13692% {
+        content: "Welcome";
+    }
+
+    95.30301%,
+    95.4691% {
+        content: "Welcom";
+    }
+
+    95.63519%,
+    95.80128% {
+        content: "Welco";
+    }
+
+    95.96737%,
+    96.13346% {
+        content: "Welc";
+    }
+
+    96.29955%,
+    96.46564% {
+        content: "Wel";
+    }
+
+    96.63173%,
+    96.79782% {
+        content: "We";
+    }
+
+    96.96391%,
+    97.13% {
+        content: "W";
+    }
+
+    97.29609%,
+    100% {
+        content: "​";
+    }
+}
+
+.glitch {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 10vw, 5rem);
+    position: relative;
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #101010;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 #00f2ff, 2px 2px #ff00c1;
+    animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(2px, 9999px, 98px, 0);
+    }
+
+    100% {
+        clip: rect(90px, 9999px, 85px, 0);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip: rect(4px, 9999px, 100px, 0);
+    }
+
+    100% {
+        clip: rect(80px, 9999px, 60px, 0);
+    }
+}
+
+@keyframes glitch-skew {
+    0% {
+        transform: skew(0deg);
+    }
+
+    100% {
+        transform: skew(1deg);
+    }
+}
+
+
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+
+@keyframes glowing {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(0, 242, 255, 0.7)) drop-shadow(0 0 10px rgba(0, 242, 255, 0.5));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.9)) drop-shadow(0 0 25px rgba(0, 242, 255, 0.7));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 5px rgba(0, 242, 255, 0.7)) drop-shadow(0 0 10px rgba(0, 242, 255, 0.5));
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D2D2D2;
+    background-image:
+        repeating-linear-gradient(to right, transparent 0 100px,
+            #25283b22 100px 101px),
+        repeating-linear-gradient(to bottom, transparent 0 100px,
+            #25283b22 100px 101px);
+}
+
+body::before {
+    position: absolute;
+    width: min(1400px, 90vw);
+    top: 10%;
+    left: 50%;
+    height: 90%;
+    transform: translateX(-50%);
+    content: '';
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    pointer-events: none;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 18%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 40s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(320px);
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.banner .slider .item img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+    border-radius: 15px;
+}
+
+.banner .slider:hover {
+    animation-play-state: paused;
+}
+
+.banner .slider .item:hover {
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(400px) translateY(-20px) scale(1.05);
+    cursor: pointer;
+}
+
+.banner .slider .item:hover img {
+    animation: glowing 2s infinite ease-in-out;
+}
+
+.banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.banner .content h1 {
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+
+.banner .content h1::after {
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+
+.banner .content .author {
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+}
+
+.banner .content h2 {
+    font-size: 3em;
+}
+
+.banner .content .model {
+    background-image: url(images/character.jpg);
+    width: 70%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1023px) {
+    .banner .slider {
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+    }
+
+    .banner .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
+    }
+
+    .banner .slider .item:hover {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(280px) translateY(-15px) scale(1.15);
+    }
+
+
+    .banner .content h1 {
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+    }
+
+    .banner .content .author {
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner .slider {
+        width: 100px;
+        height: 150px;
+        left: calc(50% - 50px);
+    }
+
+    .banner .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
+    }
+
+    .banner .slider .item:hover {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) 1deg)) translateZ(190px) translateY(-10px) scale(1.05);
+    }
+
+    .banner .content h1 {
+        font-size: 5em;
+    }
+}
+
+.slider .item {
+    pointer-events: none;
+}
+
+.slider .item a {
+    pointer-events: auto;
+    display: inline-block;
+}
+
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px) rotateZ(5deg);
+    transition: 1s all ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0) rotateZ(0deg);
+}
+
+body,
+html {
+    margin: 0px;
+    padding: 0;
+    height: 100%;
+    font-family: 'Garamond', 'serif';
+    background-color: #06030b;
+    color: #f0f0f0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.mandala-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 435px;
+    height: 435px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.mandala-svg {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#about {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.mandala-layer path,
+.mandala-layer circle {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation:
+        draw 7s ease-out forwards,
+        glow 5s ease-in-out infinite alternate;
+}
+
+.mandala-layer:nth-of-type(1) * {
+    animation-delay: 0s;
+}
+
+.mandala-layer:nth-of-type(2) * {
+    animation-delay: 1.0s;
+}
+
+.mandala-layer:nth-of-type(3) * {
+    animation-delay: 2.0s;
+}
+
+.mandala-layer:nth-of-type(4) * {
+    animation-delay: 3.0s;
+}
+
+.mandala-layer:nth-of-type(5) * {
+    animation-delay: 4.0s;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 3px rgba(0, 230, 255, 0.6));
+    }
+
+    to {
+        filter: drop-shadow(0 0 6px rgba(0, 230, 255, 0.9)) drop-shadow(0 0 9px rgba(150, 0, 255, 0.7));
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.shadow-dance {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    animation: shadow-dance-anim 4s ease-in-out infinite alternate;
+}
+
+@keyframes shadow-dance-anim {
+    0% {
+        text-shadow:
+            -3px -3px 0px #ff00c1,
+            3px 3px 0px #00f2ff;
+    }
+
+    25% {
+        text-shadow:
+            3px 3px 0px #ff00c1,
+            -3px -3px 0px #00f2ff,
+            6px 6px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    50% {
+        text-shadow:
+            3px -3px 0px #ff00c1,
+            -3px 3px 0px #00f2ff;
+    }
+
+    75% {
+        text-shadow:
+            -3px 3px 0px #ff00c1,
+            3px -3px 0px #00f2ff,
+            -6px -6px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    100% {
+        text-shadow:
+            -3px -3px 0px #ff00c1,
+            3px 3px 0px #00f2ff;
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px) rotateZ(5deg);
+    transition: 1s all ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0) rotateZ(0deg);
+}
+
+.mandala-layer path,
+.mandala-layer circle {
+    animation: none;
+}
+
+.mandala-active .mandala-layer path,
+.mandala-active .mandala-layer circle {
+    animation:
+        draw 10s ease-out forwards,
+        glow 5s ease-in-out infinite alternate;
+}
